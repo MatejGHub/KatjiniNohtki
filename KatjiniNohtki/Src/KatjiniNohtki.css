@@ -229,7 +229,7 @@ main .hero-content .hero-button button p:hover {
 
 @media (max-width: 1024px) {
   .hero-image img{
-    width: clamp(600px, 100%, 100vw);
+    width: 100%;
   }
 }
 /* End of Hero Section */
@@ -383,6 +383,39 @@ main .odpiralni-cas .odpiralni-cas-content{
   letter-spacing: 2.5px;
   color: var(--color_7);
 }
+
+@media (max-width: 1340px) {
+  main .odpiralni-cas .odpiralni-cas-content{
+    width: 60%;
+  }
+}
+
+@media (max-width: 1120px) {
+  main .odpiralni-cas .odpiralni-cas-content{
+    width: 70%;
+  }
+}
+
+@media (max-width: 980px) {
+  main .odpiralni-cas .odpiralni-cas-content{
+    width: 80%;
+  }
+}
+
+@media (max-width: 850px) {
+  main .odpiralni-cas .odpiralni-cas-content{
+    width: 95%;
+  }
+}
+
+@media (max-width: 704px) {
+  main .odpiralni-cas .odpiralni-cas-content .odpiralni-cas-content-title{
+    font-size: var(--size_2);
+  }
+  main .odpiralni-cas .odpiralni-cas-content .odpiralni-cas-content-text{
+    font-size: var(--size_1);
+  }
+}
 /* End of Odpiralni Čas Section */
 /* Start of 'Kontakt' Section */
 main .kontakt-section{
@@ -498,7 +531,8 @@ input[type="date"] {
 /* End of 'Kontakt' Section */
 /* Start of 'Footer Section' */
 footer{
-  width: 100%;
+  width: auto;
+  min-width: 100%;
   height: 50vh;
   background-color: var(--color_4);
   display: flex;
@@ -561,5 +595,81 @@ footer .footer-bottom-right-section img:hover{
   footer img{
     width: 25px;
     height: 25px;
+  }
+
+  @media (max-width: 1249px) {
+    footer{
+      height: 55vh;
+      padding-bottom: 30px;
+    }
+    footer .footer-top-section{
+      font-size: var(--size_5);
+    }
+    footer .footer-bottom-section{
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-first-row,
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-second-row,
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-third-row{
+      font-size: 1rem;
+    }
+    footer .footer-bottom-middle-section{
+      font-size: 1.1rem;
+    }
+    footer .footer-bottom-right-section img{
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 963px) {
+    footer .footer-top-section{
+      font-size: var(--size_4);
+    }
+    footer .footer-bottom-section{
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-first-row,
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-second-row,
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-third-row{
+      font-size: 0.9rem;
+    }
+    footer .footer-bottom-middle-section{
+      font-size: 1rem;
+    }
+    footer .footer-bottom-right-section img{
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    footer .footer-top-section{
+      display: none;
+    }
+    footer .footer-bottom-section{
+      display: flex;
+      flex-direction: column;
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-top: 50px;
+    }
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-first-row,
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-second-row,
+    footer .footer-bottom-section .footer-bottom-left-section .left-section-third-row{
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+    }
+    footer .footer-bottom-middle-section{
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    footer .footer-bottom-right-section img{
+      width: 30px;
+      height: 30px;
+      margin-bottom: 10px;
+    }
   }
 /* End of 'Footer Section' */
