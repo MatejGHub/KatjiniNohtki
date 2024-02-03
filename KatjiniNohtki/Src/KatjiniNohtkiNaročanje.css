@@ -251,13 +251,53 @@ main .naročanje-section .ekipa-images{
   padding-bottom: 30px;
 }
 
-main .naročanje-section .zaposlena-1-div img,
-main .naročanje-section .zaposlena-2-div img{
-  width: 250px;
-  height: 250px;
+main .naročanje-section .zaposlena-1-container,
+main .naročanje-section .zaposlena-2-container{
+  margin-top: 30px;
+  cursor: pointer;
+  padding: 2%;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+main .naročanje-section .zaposlena-1-container:hover,
+main .naročanje-section .zaposlena-2-container:hover{
+  background-color: var(--color_4);
+}
+
+main .naročanje-section .zaposlena-1-container .zaposlena-1-div,
+main .naročanje-section .zaposlena-2-container .zaposlena-2-div{
+  width: 200px;
+  height: 200px;
+  border-radius:50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+main .naročanje-section .zaposlena-1-container .zaposlena-1-div img,
+main .naročanje-section .zaposlena-2-container .zaposlena-2-div img{
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  margin-top: 30px;
+  transition: 0.5s;
+}
+
+main .naročanje-section .zaposlena-1-container .zaposlena-1-div img:hover,
+main .naročanje-section .zaposlena-2-container .zaposlena-2-div img:hover{
+  transform: scale(1.15);
+}
+
+main .naročanje-section .zaposlena-1-container p,
+main .naročanje-section .zaposlena-2-container p{
+  font-size: 1.2rem;
+  color: var(--color_3);
+}
+
+main .naročanje-section .zaposlena-1-container:hover p,
+main .naročanje-section .zaposlena-2-container:hover p{
+  color: var(--color_6);
+  font-weight: bold;
 }
 /* End of Naročanje Section */
 /* End of Main */
