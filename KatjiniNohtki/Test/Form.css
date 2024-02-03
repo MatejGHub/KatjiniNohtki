@@ -340,7 +340,6 @@ main .zakaj-section .zakaj-right {
 }
 
 main .zakaj-section .zakaj-left {
-  width: 100%;
   background: url(../Images/Backgrounds/ZakajImage.jpg) no-repeat center;
   background-size: cover;
   -webkit-mask: url("data:image/svg+xml,%3Csvg class='blob-1' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M54,-50.9C68.2,-39.8,76.6,-19.9,76.1,-0.5C75.6,18.9,66.1,37.8,51.9,46C37.8,54.3,18.9,51.9,0.2,51.7C-18.4,51.4,-36.8,53.3,-48.6,45C-60.4,36.8,-65.6,18.4,-64.5,1C-63.5,-16.3,-56.2,-32.6,-44.4,-43.6C-32.6,-54.7,-16.3,-60.5,1.8,-62.3C19.9,-64.1,39.8,-61.9,54,-50.9Z' transform='translate(100 100)' /%3E%3C/svg%3E") no-repeat center;
@@ -349,8 +348,7 @@ main .zakaj-section .zakaj-left {
 
 .zakaj-right-content{
   font-family: var(--font_family_Playfair_Display);
-  width: 70%;
-  margin-right: 200px;
+  padding: 7%;
 }
 
 .zakaj-right-content .zakaj-right-content-title{
@@ -364,6 +362,41 @@ main .zakaj-section .zakaj-left {
   color: var(--color_7);
 }
 
+@media (max-width: 910px) {
+  main .zakaj-section .zakaj-right-content{
+    padding: 3%;
+  }
+  main .zakaj-section .zakaj-right-content .zakaj-right-content-title{
+    font-size: 2.3rem;
+  }
+  main .zakaj-section .zakaj-right-content .zakaj-right-content-text{
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 716px) {
+  main .zakaj-section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  main .zakaj-section .zakaj-left,
+  main .zakaj-section .zakaj-right{
+    width: 100%;
+    text-align: center;
+  }
+  main .zakaj-section .zakaj-right-content .zakaj-right-content-title{
+    font-size: 2rem;
+  }
+  main .zakaj-section .zakaj-right-content .zakaj-right-content-text{
+    font-size: 0.8rem;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .zakaj-right-content .zakaj-right-content-title{
+    margin-bottom: 0;
+  }
+}
 /* End of Zakaj Section */
 /* Start of Storitve Section */
 main .storitve-section{

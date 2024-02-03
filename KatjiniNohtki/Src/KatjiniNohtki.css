@@ -115,6 +115,91 @@ header .logo-image:after {
   border-top: transparent;
   border-left: transparent;
 }
+
+header .hamburger-menu-icon img{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+header .hamburger-menu{
+  position: fixed;
+  margin-top: 210px;
+  text-align: center;
+  background-color: var(--color_5);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5%;
+  font-size: 1.2rem;  
+  display: none;
+}
+
+header .hamburger-menu-icon .close-icon{
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  header{
+    font-size: 0.9rem;
+  }
+  header .logo-image {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header{
+    font-size: 0.8rem;
+  }
+  header .logo-image {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  header{ 
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8%;
+  }
+  .storitve,
+  .cenik,
+  .naročanje,
+  .kontakt {
+    display: none;
+  }
+  header .logo-image {
+    font-size: var(--size_2);
+  }
+  .hamburger-menu-icon img{
+    display: block !important;
+  }
+  .hamburger-menu{
+    display: none !important;
+  }
+  .hamburger-menu.active{
+    margin-top: 220px;
+    display: block !important;
+  }
+  .hamburger-menu-icon .close-icon{
+    display: none !important;
+  }
+  .hamburger-menu-icon .close-icon.active{
+    display: block !important;
+  }
+  #hamburger-menu.active{
+    display: none !important;
+  }
+  #hamburger-menu{
+    display: block !important;
+  }
+}
 /* End of Logo */
 /* END OF HEADER */
 /* MAIN */
@@ -128,17 +213,19 @@ main {
 }
 /* Hero Section */
 main .hero-section {
-  width: clamp(1000px, 100%, 100vw);
-  height: 90vh;
+  width: 100%;
+  height: 80vh; 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  background: url(../Images/Backgrounds/HeroImage-Using.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 main .hero-image img {
-  backdrop-filter: blur(10px);
-  filter: blur(2px);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -252,8 +339,6 @@ main .zakaj-section .zakaj-right {
 }
 
 main .zakaj-section .zakaj-left {
-  width: 600px;
-  height: 600px;
   background: url(../Images/Backgrounds/ZakajImage.jpg) no-repeat center;
   background-size: cover;
   -webkit-mask: url("data:image/svg+xml,%3Csvg class='blob-1' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M54,-50.9C68.2,-39.8,76.6,-19.9,76.1,-0.5C75.6,18.9,66.1,37.8,51.9,46C37.8,54.3,18.9,51.9,0.2,51.7C-18.4,51.4,-36.8,53.3,-48.6,45C-60.4,36.8,-65.6,18.4,-64.5,1C-63.5,-16.3,-56.2,-32.6,-44.4,-43.6C-32.6,-54.7,-16.3,-60.5,1.8,-62.3C19.9,-64.1,39.8,-61.9,54,-50.9Z' transform='translate(100 100)' /%3E%3C/svg%3E") no-repeat center;
@@ -262,8 +347,7 @@ main .zakaj-section .zakaj-left {
 
 .zakaj-right-content{
   font-family: var(--font_family_Playfair_Display);
-  width: clamp(650px, 70%, 800px);
-  margin-right: 200px;
+  padding: 7%;
 }
 
 .zakaj-right-content .zakaj-right-content-title{
@@ -275,6 +359,42 @@ main .zakaj-section .zakaj-left {
 
 .zakaj-right-content .zakaj-right-content-text{
   color: var(--color_7);
+}
+
+@media (max-width: 910px) {
+  main .zakaj-section .zakaj-right-content{
+    padding: 3%;
+  }
+  main .zakaj-section .zakaj-right-content .zakaj-right-content-title{
+    font-size: 2.3rem;
+  }
+  main .zakaj-section .zakaj-right-content .zakaj-right-content-text{
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 716px) {
+  main .zakaj-section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  main .zakaj-section .zakaj-left,
+  main .zakaj-section .zakaj-right{
+    width: 100%;
+    text-align: center;
+  }
+  main .zakaj-section .zakaj-right-content .zakaj-right-content-title{
+    font-size: 2rem;
+  }
+  main .zakaj-section .zakaj-right-content .zakaj-right-content-text{
+    font-size: 0.8rem;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .zakaj-right-content .zakaj-right-content-title{
+    margin-bottom: 0;
+  }
 }
 /* End of Zakaj Section */
 /* Start of Storitve Section */
@@ -673,3 +793,30 @@ footer .footer-bottom-right-section img:hover{
     }
   }
 /* End of 'Footer Section' */
+/* Fixed Section */
+div.arrow-top-section{
+  border: 1px solid var(--color_7);
+  position: fixed;
+  bottom: 2%;
+  right: 4%;
+  border-radius: 50%;
+  padding: 10px 8px 8px 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+div.arrow-top-section.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.arrow-to-top .arrow-to-top-img{
+  transform: rotate(180deg);
+  right: 4%;
+  bottom: 2%;
+  width: 22px;
+  height: 20px;
+  z-index: 1500;
+}
+/* End of Fixed Section */
