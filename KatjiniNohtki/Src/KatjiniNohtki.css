@@ -253,14 +253,13 @@ main .hero-content .hero-message {
   font-size: var(--size_6);
   font-family: var(--font_family_Playfair_Display);
   text-align: center;
-  line-height: 120%;
-  transform: scaleY(1.1);
   user-select: none;
-  line-height: 70%;
+  line-height: 75%;
 }
 
 main .hero-content .hero-message #bodivsekarsi{
   font-family: var(--font_family_JuliettaMessie); 
+  font-size:  4.5rem;
 }
 
 main .hero-content .hero-message #salonnohtkov{
@@ -400,12 +399,13 @@ main .zakaj-section .zakaj-left {
 /* Start of Storitve Section */
 main .storitve-section{
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-color: var(--color_1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 main .storitve-section #naše-paragraph{
@@ -454,7 +454,33 @@ main .storitve-section .storitve-images{
   gap: 50px;
   font-family: var(--font_family_Montserrat);
   font-size: var(--size_1);
-  padding-bottom: 30px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+  user-select: none;
+}
+
+main .storitve-section .storitve-images:hover{
+  background-color: var(--color_4);
+  padding: 2%;
+}
+
+main .storitve-section .storitve-images img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+main .storitve-section .storitve-images img:hover{
+  padding: 2%;
+}
+
+main .storitve-section .storitve-images:hover p{
+  color: var(--color_1);
+  font-weight: 700;
 }
 /* End of Storitve Section */
 /* Start of Odpiralni Čas Section */
@@ -575,6 +601,23 @@ main .kontakt-section .kontakt-left #kontakt-title{
 main .kontakt-section .kontakt-left img{
   width: 80px;
   height: 80px;
+  user-select: none;
+}
+
+main .kontakt-section .kontakt-left img:hover{
+  animation : moveUpDown 1s infinite ease-in-out;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 main .kontakt-section .kontakt-left p{
@@ -597,6 +640,41 @@ main .kontakt-section .kontakt-left #kakodonasbtn{
   width: clamp(300px, 50%, 400px);
   height: 50px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out;
+}
+
+main .kontakt-section .kontakt-left #kakodonasbtn::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color_3);
+  transition: width 0.5s ease-in-out;
+}
+
+main .kontakt-section .kontakt-left #kakodonasbtn:hover::before{
+  width: 100%;
+}
+
+main .kontakt-section .kontakt-left #kakodonasbtn::after{
+  content: "PO NEKI ULICI GRESTE DO KONCA. NA ZASTONJ PARKIRIŠČU PUSTITE AVTO IN ČEZ CESTO JE NAŠ SALON NOHTKOV"; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  font-size: 0.76rem;
+  width: 90%;
+}
+
+main .kontakt-section .kontakt-left #kakodonasbtn:hover::after{
+  color: var(--color_1);
+  transition: color 0.3s ease-in-out;
+  transition-delay: 0.5s;
 }
 
 main .kontakt-section .kontakt-right #kontakt-vprasanja{
@@ -705,6 +783,7 @@ footer .footer-bottom-right-section img{
   height: 50px;
   cursor: pointer;
   margin: 0 5px;
+  user-select: none;
 }
 
 footer .footer-bottom-right-section img:hover{

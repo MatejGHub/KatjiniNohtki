@@ -66,3 +66,69 @@ closeBtn.addEventListener("click", () => {
   hamburgerMenu.classList.remove("active");
   hamburgerBtn.classList.remove("active");
 });
+
+// Storitve Images
+const manicureImages = [
+  "../Images/Storitve/Manikura Delo/Manikura1.jpg",
+  "../Images/Storitve/Manikura Delo/Manikura2.jpg",
+  "../Images/Storitve/Manikura Delo/Manikura3.jpg",
+  "../Images/Storitve/Manikura Delo/Manikura4.jpg"
+];
+
+const pedicureImages = [
+  "../Images/Storitve/Pedikura Delo/Pedikura1.png",
+  "../Images/Storitve/Pedikura Delo/Pedikura2.png",
+  "../Images/Storitve/Pedikura Delo/Pedikura3.png",
+  "../Images/Storitve/Pedikura Delo/Pedikura4.png"
+];
+
+let manicureIndex = 1;
+let pedicureIndex = 1;
+
+const manicureImage = document.querySelector(".manikura");
+const pedicureImage = document.querySelector(".pedikura");
+
+let manicureInterval;
+let pedicureInterval;
+
+// Manicure and Pedicure carousel
+function startManicureCarousel() {
+  manicureInterval = setInterval(() => {
+    if (manicureIndex === manicureImages.length) {
+      manicureIndex = 0;
+    }
+    manicureImage.src = manicureImages[manicureIndex];
+    manicureIndex++;
+  }, 2000);
+}
+
+function startPedicureCarousel() {
+  pedicureInterval = setInterval(() => {
+    if (pedicureIndex === pedicureImages.length) {
+      pedicureIndex = 0;
+    }
+    pedicureImage.src = pedicureImages[pedicureIndex];
+    pedicureIndex++;
+  }, 2000);
+}
+//
+
+// Manicure and Pedicure event listeners
+manicureImage.addEventListener("mouseover", () => {
+  manicureImage.src = manicureImages[0];
+  startManicureCarousel();
+});
+manicureImage.addEventListener("mouseout", () => {
+  manicureImage.src = "../Images/Storitve/Manikura.png";
+  clearInterval(manicureInterval);
+});
+
+pedicureImage.addEventListener("mouseover", () => {
+  pedicureImage.src = pedicureImages[0];
+  startPedicureCarousel();
+});
+pedicureImage.addEventListener("mouseout", () => {
+  pedicureImage.src = "../Images/Storitve/Pedikura.png";
+  clearInterval(pedicureInterval);
+});
+//
