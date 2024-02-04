@@ -29,7 +29,7 @@ arrowToTopBtn.addEventListener("click", () => {
 window.addEventListener("load", () => {
   // Scroll to section if hash is present
   if (window.location.hash === "#storitve-section") {
-    window.scrollBy(0, -55);
+    window.scrollBy(0, -140);
   }
   //
 });
@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
 // Scrolls to stortive section
 storitveBtn.addEventListener("click", () => {
   storitveSection.scrollIntoView({ behavior: "smooth" });
-  window.scrollBy(0, -55);
+  window.scrollBy(0, -140);
 });
 
 // Scrolls to kontakt section
