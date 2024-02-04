@@ -13,3 +13,9 @@ closeBtn.addEventListener("click", () => {
   hamburgerMenu.classList.remove("active");
   hamburgerBtn.classList.remove("active");
 });
+
+const storitveBtn = document.querySelector(".storitve");
+
+storitveBtn.addEventListener("click", () => {
+  window.open("KatjiniNohtki.html#storitve-section", "_self");
+});

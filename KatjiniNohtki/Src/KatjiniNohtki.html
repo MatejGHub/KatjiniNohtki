@@ -29,9 +29,11 @@
           <p>NAROČANJE</p>
         </div>
       </a>
-      <div class="kontakt">
-        <p>KONTAKT</p>
-      </div>
+      <a href="KatjiniNohtkiKontakt.html">
+        <div class="kontakt">
+          <p>KONTAKT</p>
+        </div>
+      </a>
       <div class="hamburger-menu-icon">
         <img
           id="hamburger-menu"
@@ -76,9 +78,11 @@
             <p id="dobrodošlivsalonu">Dobrodošli v kotiček za vaše potrebe po lepih nohtkih in dobrem počutju</p>
           </div>
           <div class="hero-button">
-            <button class="rezerviraj-termin"><p>
-              REZERVIRAJ TERMIN
-            </p></button>
+            <a href="KatjiniNohtkiNaročanje.html">
+              <button class="rezerviraj-termin"><p>
+                REZERVIRAJ TERMIN
+              </p></button>
+            </a>
           </div>
         </div>
       </section>
@@ -103,7 +107,7 @@
       </section>
       <!-- End of 'Zakaj' Section -->
       <!-- Start of 'Storitve' Section -->
-      <section class="storitve-section">
+      <section class="storitve-section" id="storitve-section">
         <p id="naše-paragraph">NAŠE</p>
         <p id="storitve-paragraph">storitve</p>
         <p id="nagovor-paragraph">V našem lepotnem kotičku nudimo pester nabor kozmetičnih storitev. Z individualnim pristopom in časom, ki je namenjen samo vam in vašim željam, bomo poskrbeli, da dosežete in izpolnite svoj potencial.</p>
@@ -153,16 +157,17 @@
         <div class="kontakt-right">
           <p id="kontakt-vprasanja">Za vsa vprašanja in sporočila smo dosegljivi tudi preko kontaktne forme. Odgovorili vam bomo v najkrajšem možnem času!</p>
           <div class="kontakt-obrazec">
-            <form action="#" class="form-grid">
+            <form action="https://api.web3forms.com/submit" method="POST" class="form-grid">
+              <input type="hidden" name="access_key" value="eae0db09-1fcd-48f3-bad9-27d17951de3f">
               <input
                 type="text"
                 id="fullname"
                 name="fullname"
                 placeholder="Ime in Priimek"
               />
-              <input type="tel" id="phone" name="phone" placeholder="Telefonska številka" />
-              <input type="email" id="email" name="email" placeholder="Vaša e-pošta" />
-              <input type="date" id="date" name="date" placeholder="Datum" />
+              <input type="tel" id="phone" name="phone" placeholder="Telefonska številka" required/>
+              <input type="email" id="email" name="email" placeholder="Vaša e-pošta" required/>
+              <input type="date" id="date" name="date" placeholder="Datum" required/>
               <textarea
                 id="message"
                 name="message"
@@ -227,5 +232,6 @@
       </div>
       <!-- End of Fixed Section  -->
     <script src="KatjiniNohtki.js"></script>
+    </script>
   </body>
 </html>
