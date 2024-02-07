@@ -45,18 +45,21 @@
         <img class="close-icon" src="../Images/Header/Close Icon.png" alt="" />
       </div>
       <div class="hamburger-menu">
-        <div class="storitve2">
-          <p>STORITVE</p>
-        </div>
-        <div class="cenik2">
-          <p>CENIK</p>
-        </div>
-        <div class="naročanje2">
-          <p>NAROČANJE</p>
-        </div>
-        <div class="kontakt2">
-          <p>KONTAKT</p>
-        </div>
+        <a href="KatjiniNohtki.html">
+          <div class="storitve2">
+            <p>STORITVE</p>
+          </div>
+        </a>
+        <a href="KatjiniNohtkiCenik.html">
+          <div class="cenik2">
+            <p>CENIK</p>
+          </div>
+        </a>
+        <a href="KatjiniNohtkiNaročanje.html">
+          <div class="naročanje2">
+            <p>NAROČANJE</p>
+          </div>
+        </a>
       </div>
     </header>
     <!-- END OF HEADER -->
@@ -65,18 +68,27 @@
       <!-- Start of 'Kontakt' Section -->
       <section class="kontakt-section">
         <div class="kontakt-left">
-          <h2 id="kontakt-title">Kontakt</h2>
-          <img src="../Images/Kontakt/Telefon-Ikona.png" alt="Telefon Ikona" />
-          <p>041 321 123</p>
-          <img
-            src="../Images/Kontakt/Lokacija-Ikona.png"
-            alt="Lokacija Ikona"
-          />
-          <p>
-            Neka ulica 13,<br />
-            Ljubljana, Slovenija
-          </p>
-          <button id="kakodonasbtn">KAKO DO NAS?</button>
+          <div class="kontakt-left-top">
+            <h2 id="kontakt-title">Kontakt</h2>
+          </div>
+          <div class="kontakt-left-middle">
+            <img
+              src="../Images/Kontakt/Telefon-Ikona.png"
+              alt="Telefon Ikona"
+            />
+            <p style="text-align: middle">041 321 123</p>
+            <img
+              src="../Images/Kontakt/Lokacija-Ikona.png"
+              alt="Lokacija Ikona"
+            />
+            <p>
+              Neka ulica 13,<br />
+              Ljubljana, Slovenija
+            </p>
+          </div>
+          <div class="kontakt-left-bottom">
+            <button id="kakodonasbtn">KAKO DO NAS?</button>
+          </div>
         </div>
         <div class="kontakt-right">
           <p id="kontakt-vprasanja">
@@ -84,7 +96,16 @@
             forme. Odgovorili vam bomo v najkrajšem možnem času!
           </p>
           <div class="kontakt-obrazec">
-            <form action="#" class="form-grid">
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="form-grid"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="eae0db09-1fcd-48f3-bad9-27d17951de3f"
+              />
               <input
                 type="text"
                 id="fullname"
@@ -162,6 +183,6 @@
       </div>
     </footer>
     <!-- End of 'Footer Section' -->
-    <script></script>
+    <script src="KatjiniNohtkiKontakt.js"></script>
   </body>
 </html>

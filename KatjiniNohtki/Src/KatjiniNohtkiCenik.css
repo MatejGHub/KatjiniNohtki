@@ -166,7 +166,7 @@ header .hamburger-menu-icon .close-icon{
   header{
     display: flex;
     justify-content: space-between;
-    padding: 0 8%;
+    padding: 0 0 0 10%;
   }
   .storitve,
   .cenik,
@@ -180,11 +180,17 @@ header .hamburger-menu-icon .close-icon{
   .hamburger-menu-icon img{
     display: block !important;
   }
-  .hamburger-menu{
-    display: none !important;
-  }
-  .hamburger-menu.active{
+  .hamburger-menu {
     display: block !important;
+    position: fixed;
+    right: -600px;
+    transition: right 0.3s ease-in-out;
+    overflow: hidden;
+    top: -120px;
+  }
+
+  .hamburger-menu.active {
+    right: 0;
   }
   .hamburger-menu-icon .close-icon{
     display: none !important;

@@ -63,12 +63,12 @@ header {
   position: fixed;
   align-items: center;
   top: 0;
-  gap: clamp(1rem, 5vw, 2rem);
+  gap: 30px;
   z-index: 1000;
   font-size: var(--size_1);
   font-family: var(--font_family_Oxygen);
   font-weight: 400;
-  padding: 0 var(--size_1);
+  padding-left: 0.7rem;
   user-select: none;
   transition: 0.3s;
 }
@@ -166,7 +166,7 @@ header .hamburger-menu-icon .close-icon{
   header{
     display: flex;
     justify-content: space-between;
-    padding: 0 8%;
+    padding: 0 8% 0 0;
   }
   .storitve,
   .cenik,
@@ -180,11 +180,16 @@ header .hamburger-menu-icon .close-icon{
   .hamburger-menu-icon img{
     display: block !important;
   }
-  .hamburger-menu{
-    display: none !important;
-  }
-  .hamburger-menu.active{
+  .hamburger-menu {
     display: block !important;
+    position: fixed;
+    right: -600px;
+    transition: right 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .hamburger-menu.active {
+    right: 0;
   }
   .hamburger-menu-icon .close-icon{
     display: none !important;
@@ -226,7 +231,14 @@ main .kontakt-section .kontakt-right{
   justify-content: center;
 }
 
-main .kontakt-section .kontakt-left #kontakt-title{
+main .kontakt-section .kontakt-left-middle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .kontakt-section .kontakt-left-top #kontakt-title{
   font-family: var(--font_family_Playfair_Display);
   font-size: var(--size_5);
   color: var(--color_3);
@@ -243,13 +255,14 @@ main .kontakt-section .kontakt-left img{
   height: 80px;
 }
 
-main .kontakt-section .kontakt-left p{
+main .kontakt-section .kontakt-left-middle p{
   font-family: var(--font_family_Montserrat);
   font-size: 1.1rem;
   color: var(--color_2);
   line-height: 160%;
   margin-bottom: 30px;
   text-align: center;
+  padding-left: 0;
 }
 
 main .kontakt-section .kontakt-left #kakodonasbtn{
@@ -260,9 +273,44 @@ main .kontakt-section .kontakt-left #kakodonasbtn{
   font-family: var(--font_family_Montserrat);
   font-size: var(--size_2);
   font-style: italic;
-  width: clamp(300px, 50%, 400px);
+  width: 300px;
   height: 50px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out;
+}
+
+main .kontakt-section .kontakt-left #kakodonasbtn::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color_3);
+  transition: width 0.5s ease-in-out;
+}
+
+main .kontakt-section .kontakt-left #kakodonasbtn:hover::before{
+  width: 100%;
+}
+
+main .kontakt-section .kontakt-left #kakodonasbtn::after{
+  content: "PO NEKI ULICI GRESTE DO KONCA. NA ZASTONJ PARKIRIŠČU PUSTITE AVTO IN ČEZ CESTO JE NAŠ SALON NOHTKOV"; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  font-size: 0.76rem;
+  width: 90%;
+}
+
+main .kontakt-section .kontakt-left #kakodonasbtn:hover::after{
+  color: var(--color_1);
+  transition: color 0.3s ease-in-out;
+  transition-delay: 0.5s;
 }
 
 main .kontakt-section .kontakt-right #kontakt-vprasanja{
@@ -283,7 +331,7 @@ main .kontakt-section .kontakt-right #kontakt-vprasanja{
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr; 
-  gap: 25px; 
+  gap: 19px; 
   font-family: var(--font_family_Montserrat);
 }
 
@@ -314,6 +362,90 @@ input[type="date"] {
   color: var(--color_7);
   opacity: 0.8;
 }
+
+@media (max-width: 1100px) {
+  main .kontakt-section{
+    padding: 0 7%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    main .kontakt-section{
+      padding: 0 4%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  } 
+  
+  @media (max-width: 950px) {
+    main .kontakt-section{
+      display: flex;
+      flex-direction: column;
+      height: 120vh;
+      margin-top: 110px;
+    }
+    main.kontakt-section .kontakt-left{
+      display: flex;
+      flex-direction: column;
+    }
+    main .kontakt-section .kontakt-left-middle{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: none;
+    }
+    main .kontakt-section .kontakt-left-middle p{
+      width: 170px;
+      margin-bottom: 0;
+    }
+    main .kontakt-section .kontakt-left-bottom{
+      margin-top: 30px;
+    }
+  } 
+
+  @media (max-width: 530px) {
+    main .kontakt-section{
+      margin-top: 90px;
+      height: 100vh;
+    }
+    main .kontakt-section .kontakt-left img{
+      width: 60px;
+      height: 60px;
+    }
+    main .kontakt-section .kontakt-left-middle p{
+      font-size: 0.9rem;
+      margin: 0;
+      padding:0 ;
+      width: 120px;
+    }
+    main .kontakt-section .kontakt-left-bottom #kakodonasbtn{
+      width: 300px;
+      height: 45px;
+      font-size: 1.3rem;
+    }
+    main .kontakt-section .kontakt-right #kontakt-vprasanja{
+      font-size: 0.9rem;
+      width: 170%;
+      padding-bottom: 0;
+    }
+    .form-grid {
+      width: 300px;
+      gap: 12px;
+    }
+    .form-grid textarea {
+      height: 60px;
+    }
+    .form-grid .kontakt-submit{
+      height: 35px;
+      font-size: 1rem;
+    }
+    .form-grid input{
+      height: 30px;
+    }
+  }
 /* End of 'Kontakt' Section */
 /* End of Main */
 /* Start of 'Footer Section' */

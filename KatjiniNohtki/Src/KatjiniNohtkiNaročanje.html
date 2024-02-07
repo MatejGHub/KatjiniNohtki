@@ -43,18 +43,21 @@
         <img class="close-icon" src="../Images/Header/Close Icon.png" alt="" />
       </div>
       <div class="hamburger-menu">
-        <div class="storitve2">
-          <p>STORITVE</p>
-        </div>
-        <div class="cenik2">
-          <p>CENIK</p>
-        </div>
-        <div class="naročanje2">
-          <p>NAROČANJE</p>
-        </div>
-        <div class="kontakt2">
-          <p>KONTAKT</p>
-        </div>
+        <a href="KatjiniNohtki.html">
+          <div class="storitve2">
+            <p>STORITVE</p>
+          </div>
+        </a>
+        <a href="KatjiniNohtkiCenik.html">
+          <div class="cenik2">
+            <p>CENIK</p>
+          </div>
+        </a>
+        <a href="KatjiniNohtkiKontakt.html">
+          <div class="kontakt2">
+            <p>KONTAKT</p>
+          </div>
+        </a>
       </div>
     </header>
     <!-- END OF HEADER -->
@@ -115,7 +118,68 @@
             <p id="karmen-novak">KARMEN NOVAK</p>
           </div>
         </div>
-        <p>OSTALO ŠE PRIDE</p>
+        <div class="narocanje-hidden-section">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="form-grid"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="eae0db09-1fcd-48f3-bad9-27d17951de3f"
+            />
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Ime in Priimek"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Telefonska številka"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Vaša e-pošta"
+              required
+            />
+            <select id="service" name="service">
+              <option value="" disabled selected>Izberite storitev</option>
+              <option value="manicure">Manikura</option>
+              <option value="pedicure">Pedikura</option>
+            </select>
+            <select
+              id="options"
+              name="options"
+              placeholder="Select service first"
+              disabled
+            >
+              <option selected disabled>Najprej izberite storitev</option>
+              <!-- Options will be populated based on the selected service -->
+            </select>
+            <input
+              type="datetime-local"
+              id="appointment"
+              name="appointment"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Vaše sporočilo, vprašanje..."
+              maxlength="500"
+            ></textarea>
+
+            <input class="kontakt-submit" type="submit" value="POŠLJI" />
+          </form>
+        </div>
       </section>
     </main>
     <!-- End of Main -->

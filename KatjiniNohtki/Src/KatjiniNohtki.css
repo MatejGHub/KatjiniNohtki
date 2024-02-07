@@ -180,12 +180,16 @@ header .hamburger-menu-icon .close-icon{
   .hamburger-menu-icon img{
     display: block !important;
   }
-  .hamburger-menu{
-    display: none !important;
-  }
-  .hamburger-menu.active{
-    margin-top: 220px;
+  .hamburger-menu {
     display: block !important;
+    position: fixed;
+    right: -700px;
+    transition: right 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .hamburger-menu.active {
+    right: 0;
   }
   .hamburger-menu-icon .close-icon{
     display: none !important;
