@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="KatjiniNohtkiNaročanje.css" />
+    <link rel="icon" href="../Images/Logo/KatjiniNohtki.png" />
+    <title>Katjini Nohtki</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="storitve">
+        <p>STORITVE</p>
+      </div>
+      <a href="KatjiniNohtkiCenik.html">
+        <div class="cenik">
+          <p>CENIK</p>
+        </div>
+      </a>
+      <a href="KatjiniNohtki.html">
+        <div class="logo-image">
+          <p>
+            KATJINI<br />
+            NOHTKI
+          </p>
+        </div>
+      </a>
+      <div class="naročanje">
+        <p>NAROČANJE</p>
+      </div>
+      <a href="KatjiniNohtkiKontakt.html">
+        <div class="kontakt">
+          <p>KONTAKT</p>
+        </div>
+      </a>
+      <div class="hamburger-menu-icon">
+        <img
+          id="hamburger-menu"
+          src="../Images/Header/Hamburger Menu.png"
+          alt="Hamburger Menu"
+        />
+        <img class="close-icon" src="../Images/Header/Close Icon.png" alt="" />
+      </div>
+      <div class="hamburger-menu">
+        <a href="KatjiniNohtki.html">
+          <div class="storitve2">
+            <p>STORITVE</p>
+          </div>
+        </a>
+        <a href="KatjiniNohtkiCenik.html">
+          <div class="cenik2">
+            <p>CENIK</p>
+          </div>
+        </a>
+        <a href="KatjiniNohtkiKontakt.html">
+          <div class="kontakt2">
+            <p>KONTAKT</p>
+          </div>
+        </a>
+      </div>
+    </header>
+    <!-- END OF HEADER -->
+    <!-- Start of Main -->
+    <main>
+      <section class="naročanje-section">
+        <p id="naša-paragraph">NAŠA</p>
+        <p id="ekipa-paragraph">ekipa</p>
+        <p id="nagovor-paragraph">
+          Vsak prinaša edinstven dotik k svojemu delu, ponuja različne stile in
+          tehnike. Spodbujamo vas, da raziščete njihove profile, razumete
+          njihove prednosti in izberete tistega, ki odmeva z vašim slogom in
+          pričakovanji.
+        </p>
+        <div class="ekipa-images">
+          <div class="zaposlena-1-container">
+            <div style="position: relative" class="zaposlena-1-div">
+              <p
+                style="
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  top: 30px;
+                  z-index: 1;
+                "
+                class="overlay-text"
+              >
+                IZBERI
+              </p>
+              <img
+                src="../Images/Naročanje/Ekipa/KatjaObolnar.jpg"
+                alt="Katja Obolnar Slika"
+                class="katja-obolnar-slika"
+              />
+            </div>
+            <p id="katja-obolnar">KATJA OBO</p>
+          </div>
+          <div class="zaposlena-2-container">
+            <div style="position: relative" class="zaposlena-2-div">
+              <p
+                style="
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  top: 30px;
+                  z-index: 1;
+                "
+                class="overlay-text2"
+              >
+                IZBERI
+              </p>
+              <img
+                src="../Images/Naročanje/Ekipa/KarmenNovak.jpg"
+                alt="Karmen Novak Slika"
+                class="karmen-novak-slika"
+              />
+            </div>
+            <p id="karmen-novak">KARMEN NOVAK</p>
+          </div>
+        </div>
+        <div class="narocanje-hidden-section">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="form-grid"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="eae0db09-1fcd-48f3-bad9-27d17951de3f"
+            />
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Ime in Priimek"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Telefonska številka"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Vaša e-pošta"
+              required
+            />
+            <select id="service" name="service">
+              <option value="" disabled selected>Izberite storitev</option>
+              <option value="manicure">Manikura</option>
+              <option value="pedicure">Pedikura</option>
+            </select>
+            <select
+              id="options"
+              name="options"
+              placeholder="Select service first"
+              disabled
+            >
+              <option selected disabled>Najprej izberite storitev</option>
+              <!-- Options will be populated based on the selected service -->
+            </select>
+            <input
+              type="datetime-local"
+              id="appointment"
+              name="appointment"
+              required
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Vaše sporočilo, vprašanje..."
+              maxlength="500"
+            ></textarea>
+
+            <input class="kontakt-submit" type="submit" value="POŠLJI" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- End of Main -->
+    <!-- Start of 'Footer Section' -->
+    <footer>
+      <div class="footer-top-section">
+        <p>Negujte se ljubite svoje nohtke in vzemite si trenutek zase</p>
+      </div>
+      <div class="footer-bottom-section">
+        <div class="footer-bottom-left-section">
+          <div class="left-section-first-row">
+            <img src="../Images/Footer/Profil.png" alt="Profil Ikona" />
+            <p>KATJINI NOHTKI SALON</p>
+          </div>
+          <div class="left-section-second-row">
+            <img src="../Images/Footer/Lokacija.png" alt="Lokacija-Ikona" />
+            <p>NEKA ULICA 13, LJUBLJANA</p>
+          </div>
+          <div class="left-section-third-row">
+            <img src="../Images/Footer/Telefon.png" alt="Telefon-ikona" />
+            <p>041 321 123</p>
+          </div>
+        </div>
+        <div class="footer-bottom-middle-section">
+          <div class="middle-section-first-row">
+            <p>PON – SOB / 8:00 – 20:00</p>
+          </div>
+          <div class="middle-section-second-row">
+            <p>NED – PRAZNIKI / ZAPRTO</p>
+          </div>
+          <div class="middle-section-third-row">
+            <p>VIP TERMIN / PO DOGOVORU</p>
+          </div>
+        </div>
+        <div class="footer-bottom-right-section">
+          <div class="right-section-first-row">
+            <img src="../Images/Footer/facebook.png" alt="Facebook-ikona" />
+            <img src="../Images/Footer/Instagram.png" alt="Instagram-ikona" />
+          </div>
+          <div class="right-section-second-row">
+            <p>©Katjini Nohtki 2024</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End of 'Footer Section' -->
+    <script src="KatjiniNohtkiNaročanje.js"></script>
+  </body>
+</html>
